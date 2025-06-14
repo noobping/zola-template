@@ -1,2 +1,2 @@
-# zola-template
+# Zola template
 Use my [Zola theme](https://github.com/noobping/zola-theme)
