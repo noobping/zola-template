@@ -13,6 +13,12 @@ compile_sass = false
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
+# Generate a sitemap. This iis used by the webapp option in the theme
+generate_sitemap = true
+
+# Generate a robots.txt file
+generate_robots_txt = true
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
