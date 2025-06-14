@@ -1,6 +1,4 @@
 +++
 +++
 
-## Example
-
 Hello, World!
