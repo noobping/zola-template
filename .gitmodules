@@ -1,0 +1,3 @@
+[submodule "themes/noobping"]
+	path = themes/noobping
+	url = https://github.com/noobping/zola-theme.git
