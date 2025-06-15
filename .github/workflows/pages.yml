@@ -50,7 +50,7 @@ jobs:
       - name: Generate pictures
         run: |
           chmod +x .github/scripts/*.*
-          ls -lha public
+          sudo chown -R $USER:$USER public
           .github/scripts/pictures.sh
           .github/scripts/pictures.py
       - name: Upload static files as artifact
