@@ -41,24 +41,22 @@ jobs:
     name: Build static files
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main
-        uses: actions/checkout@v4
-      - name: Build and deploy
-        uses: shalzz/zola-deploy-action@v0.20.0
+      - uses: mfinelli/setup-imagemagick@v6
+      - uses: actions/checkout@v4
+      - uses: shalzz/zola-deploy-action@v0.20.0
         env:
           BUILD_ONLY: true
           ZOLA_BUILD_DIR: public
-      - name: Upload static files as artifact
-        id: deployment
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: public
-      - uses: mfinelli/setup-imagemagick@v6
       - name: Generate pictures
         run: |
           chmod +x .github/scripts/*.*
           .github/scripts/pictures.sh
           .github/scripts/pictures.py
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
 
   deploy:
     name: Deploy to GitHub Pages
