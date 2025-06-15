@@ -3,7 +3,7 @@
 
 # Zola template
 
-An template to use my [theme](https://github.com/noobping/zola-theme) for [Zola](https://www.getzola.org/), a fast static site generator.
+A ready-to-use template featuring my [custom theme](https://github.com/noobping/zola-theme) for [Zola](https://www.getzola.org/) — a fast, modern static site generator.
 
 ## Getting started for the first time
 
