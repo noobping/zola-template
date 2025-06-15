@@ -53,7 +53,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
-      - uses: mfinelli/setup-imagemagick@latest
+      - uses: mfinelli/setup-imagemagick@v6
       - name: Generate pictures
         run: |
           chmod +x .github/scripts/*.*
