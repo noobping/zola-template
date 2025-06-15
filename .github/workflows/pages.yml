@@ -50,7 +50,6 @@ jobs:
       - name: Generate pictures
         run: |
           chmod +x .github/scripts/*.*
-          chmod -R 777 public
           ls -lh public
           .github/scripts/pictures.sh
           .github/scripts/pictures.py
