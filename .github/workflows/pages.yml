@@ -38,7 +38,7 @@ concurrency:
 
 jobs:
   build:
-    name: Publish site
+    name: Build static files
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
@@ -53,7 +53,14 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
+      - name: Generate pictures
+        run: |
+          chmod +x .github/scripts/*.*
+          .github/scripts/pictures.sh
+          .github/scripts/pictures.py
+
   deploy:
+    name: Deploy to GitHub Pages
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
