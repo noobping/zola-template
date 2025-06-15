@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://zola.noobping.dev/"
+base_url = "https://noobping.github.io/zola-template/"
 title = "example"
 description = "a example description"
 author = "noobping"
