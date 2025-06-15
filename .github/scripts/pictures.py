@@ -41,6 +41,13 @@ def wrap_img(m):
             f'media="(max-width: {w}px)">'
         )
 
+        avif = f"{base}-{w}.avif"
+        out.append(
+            f'<source srcset="{avif}" '
+            f'type="image/avif" '
+            f'media="(max-width: {w}px)">'
+        )
+
     out.append(f"<img{attrs}>") # re-emit the original <img…> (attrs already include src=… etc)
     out.append("</picture>")
     return "".join(out)
