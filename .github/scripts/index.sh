@@ -5,8 +5,8 @@ find content/ -type d | while read -r dir; do
         index_file="$dir/_index.md"
         if [ ! -f "$index_file" ]; then
             echo "Creating $index_file"
-            echo "---" > "$index_file"
-            echo "---" >> "$index_file"
+            echo "+++" > "$index_file"
+            echo "+++" >> "$index_file"
         fi
     fi
 done
