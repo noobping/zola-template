@@ -19,6 +19,9 @@ generate_sitemap = true
 # Generate a robots.txt file
 generate_robots_txt = true
 
+# Make files smaller by removing whitespace and comments
+minify_html = true
+
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
