@@ -3,7 +3,7 @@
 
 # Zola template
 
-Use my [Zola theme](https://github.com/noobping/zola-theme).
+My [theme](https://github.com/noobping/zola-theme) for [Zola](https://www.getzola.org/), a fast static site generator.
 
 ## Getting started for the first time
 
