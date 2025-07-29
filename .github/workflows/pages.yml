@@ -43,7 +43,14 @@ jobs:
     steps:
       - uses: mfinelli/setup-imagemagick@v6
       - uses: actions/checkout@v4
-      - uses: shalzz/zola-deploy-action@v0.20.0
+      - name: Generate indexes and add dates
+        run: |
+          chmod +x .github/scripts/*.*
+          .github/scripts/dates.sh
+          .github/scripts/index.sh
+          find content -type f -name "*.txt" -exec sh -c 'mv "$0" "${0%.txt}.md"' {} \;
+      - name: Generate static files
+        uses: shalzz/zola-deploy-action@v0.20.0
         env:
           BUILD_ONLY: true
           ZOLA_BUILD_DIR: public
